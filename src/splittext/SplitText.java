@@ -15,7 +15,6 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 /**
- *
  * @author Art7n
  */
 public class SplitText extends JFrame {
@@ -25,13 +24,13 @@ public class SplitText extends JFrame {
     private JLabel result = new JLabel();
     SplitText (){
         super("Split Text");
-	this.setBounds(100,100,250,200);
-	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    this.setBounds(100,100,250,200);
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         labelResult.setText("Result");
         
         Container container = this.getContentPane();
-	container.setLayout(new GridLayout(3,2,2,2));
-	container.add(input);
+	    container.setLayout(new GridLayout(3,2,2,2));
+	    container.add(input);
         splitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 splitButtonActionPerformed(evt);
@@ -40,6 +39,11 @@ public class SplitText extends JFrame {
         container.add(splitButton);
         container.add(result);
     }
+
+    /**
+     * This method define what to do when the button is pressed.
+     */
+
     private void splitButtonActionPerformed(java.awt.event.ActionEvent evt) {                                         
         String Str = input.getText();
         String [] strMass = Str.split(" ");
